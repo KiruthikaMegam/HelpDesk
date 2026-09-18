@@ -1,0 +1,190 @@
+.ticket-card {
+  width: 100%;
+
+  padding: 19px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  border: 1px solid #e7ebf3;
+  border-radius: 15px;
+
+  background: white;
+
+  transition: 0.25s ease;
+}
+
+.ticket-card:hover {
+  border-color: #d8d2ff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 25px rgba(37, 46, 78, 0.07);
+}
+
+.ticket-card-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.ticket-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.ticket-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8c95a8;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ticket-title {
+  color: #232c44;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.ticket-title:hover {
+  color: #684ef5;
+}
+
+.ticket-description {
+  max-width: 700px;
+
+  margin: 10px 0 15px;
+
+  color: #7b8497;
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.ticket-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.ticket-card-meta > div {
+  min-width: 90px;
+}
+
+.ticket-meta-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #a1a8b8;
+
+  font-size: 9px;
+}
+
+.ticket-card-meta strong {
+  color: #4c556a;
+
+  font-size: 10px;
+}
+
+.ticket-card-side {
+  min-width: 110px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.ticket-view-button {
+  padding: 7px 11px;
+
+  border: 1px solid #e5e2fd;
+  border-radius: 7px;
+
+  background: #f8f7ff;
+
+  color: #664df2;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.ticket-view-button:hover {
+  background: #684df4;
+
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .ticket-card {
+    padding: 16px;
+
+    flex-direction: column;
+  }
+
+  .ticket-card-heading {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .ticket-card-meta {
+    gap: 14px;
+  }
+
+  .ticket-card-meta > div {
+    width: calc(50% - 10px);
+  }
+
+  .ticket-card-side {
+    width: 100%;
+    min-width: 0;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .ticket-view-button {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .ticket-card-meta {
+    flex-direction: column;
+  }
+
+  .ticket-card-meta > div {
+    width: 100%;
+  }
+
+  .ticket-card-side {
+    gap: 7px;
+  }
+
+  .ticket-view-button {
+    width: 100%;
+
+    margin-left: 0;
+
+    text-align: center;
+  }
+}

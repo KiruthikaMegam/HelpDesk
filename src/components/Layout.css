@@ -1,0 +1,48 @@
+.helpdesk-layout {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+}
+
+.helpdesk-main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+.helpdesk-content {
+  width: 100%;
+  padding: 28px;
+}
+
+.sidebar-mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .helpdesk-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sidebar-mobile-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(10, 18, 38, 0.55);
+    backdrop-filter: blur(2px);
+  }
+
+  .helpdesk-content {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .helpdesk-content {
+    padding: 16px 13px 30px;
+  }
+}
