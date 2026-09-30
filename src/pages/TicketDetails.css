@@ -1,393 +1,541 @@
 .ticket-details-page {
+
   width: 100%;
+
 }
 
 .ticket-details-header {
+
   margin-bottom: 18px;
 
   display: flex;
+
   justify-content: space-between;
+
   gap: 20px;
+
 }
 
 .back-link {
+
   display: inline-block;
 
   margin-bottom: 12px;
 
-  color: #6c54f3;
+  color: #a394ff;
 
   text-decoration: none;
 
   font-size: 9px;
+
   font-weight: 700;
+
 }
 
 .details-ticket-number {
+
   margin-bottom: 5px;
 
-  color: #9aa1b1;
+  color: #929a96;
 
   font-size: 9px;
+
   font-weight: 700;
+
 }
 
 .details-title-area h1 {
+
   max-width: 700px;
 
   margin: 0;
 
-  color: #263047;
+  color: #eef1ef;
 
   font-size: 23px;
+
   line-height: 1.35;
+
 }
 
 .details-badges {
+
   margin-top: 11px;
 
   display: flex;
+
   align-items: center;
+
   flex-wrap: wrap;
+
   gap: 6px;
+
 }
 
 .details-header-actions {
+
   display: flex;
+
   align-items: flex-start;
+
   gap: 8px;
+
 }
 
 .details-edit-button,
+
 .details-delete-button {
+
   min-height: 38px;
 
   padding: 0 13px;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 9px;
 
   font-size: 10px;
+
   font-weight: 700;
 
   cursor: pointer;
+
 }
 
 .details-edit-button {
+
   border: none;
 
-  background: #684df4;
+  background: #8b78ff;
 
-  color: white;
+  color: #ffffff;
 
   text-decoration: none;
+
 }
 
 .details-delete-button {
-  border: 1px solid #f1ccd1;
 
-  background: #fff8f8;
+  border: 1px solid #5a3439;
 
-  color: #d84e5e;
+  background: rgba(240, 90, 106, 0.10);
+
+  color: #f16b7b;
+
 }
 
 .ticket-details-layout {
+
   display: grid;
+
   grid-template-columns: minmax(0, 1.7fr) minmax(270px, 0.65fr);
+
   gap: 15px;
+
   align-items: flex-start;
+
 }
 
 .details-main-column,
+
 .details-side-column {
+
   min-width: 0;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 14px;
+
 }
 
 .details-card {
+
   min-width: 0;
 
   padding: 20px;
 
-  border: 1px solid #e7ebf2;
+  border: 1px solid #303432;
+
   border-radius: 15px;
 
-  background: white;
+  background: #202321;
 
-  box-shadow: 0 7px 25px rgba(36, 44, 70, 0.035);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.22);
+
 }
 
 .details-card-heading {
+
   margin-bottom: 17px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 12px;
+
 }
 
 .details-card-heading h3 {
+
   margin: 0;
 
-  color: #343d53;
+  color: #e9edeb;
 
   font-size: 12px;
+
 }
 
 .details-card-heading span {
-  color: #969dad;
+
+  color: #929a96;
 
   font-size: 8px;
+
 }
 
 .issue-description {
+
   margin: 0;
 
-  color: #687185;
+  color: #a2aaa6;
 
   font-size: 10px;
+
   line-height: 1.85;
+
 }
 
 .details-attachment-section {
+
   margin-top: 22px;
 
   padding-top: 17px;
 
-  border-top: 1px solid #eef0f5;
+  border-top: 1px solid #303432;
+
 }
 
 .details-attachment-section h4 {
+
   margin: 0 0 10px;
 
-  color: #596276;
+  color: #aeb5b1;
 
   font-size: 10px;
+
 }
 
 .details-attachment-list {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 7px;
+
 }
 
 .details-attachment {
+
   padding: 8px 10px;
 
   display: flex;
+
   align-items: center;
+
   gap: 9px;
 
-  border: 1px solid #e8ebf2;
+  border: 1px solid #383c3a;
+
   border-radius: 9px;
 
-  background: #fafbfc;
+  background: #292c2a;
+
 }
 
 .details-file-icon {
+
   width: 31px;
+
   height: 31px;
 
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 8px;
 
-  background: #eeebff;
+  background: rgba(139, 120, 255, 0.14);
 
-  color: #684df3;
+  color: #a394ff;
+
 }
 
 .details-attachment > div:nth-child(2) {
+
   min-width: 0;
+
   flex: 1;
+
 }
 
 .details-attachment strong {
+
   max-width: 100%;
 
   display: block;
 
   overflow: hidden;
 
-  color: #555f74;
+  color: #cbd0cd;
 
   font-size: 9px;
 
   text-overflow: ellipsis;
+
   white-space: nowrap;
+
 }
 
 .details-attachment span {
+
   display: block;
 
   margin-top: 2px;
 
-  color: #9aa1b1;
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .details-attachment button {
+
   border: none;
 
   background: transparent;
 
-  color: #674cf3;
+  color: #a394ff;
 
   font-size: 9px;
+
   font-weight: 700;
 
   cursor: pointer;
+
 }
 
 .comments-list {
+
   display: flex;
+
   flex-direction: column;
+
 }
 
 .comment-empty {
+
   padding: 26px;
 
   border-radius: 10px;
 
-  background: #fafbfc;
+  background: #292c2a;
 
-  color: #949cac;
+  color: #929a96;
 
   font-size: 9px;
 
   text-align: center;
+
 }
 
 .comment-item {
+
   padding: 14px 0;
 
   display: flex;
+
   gap: 10px;
 
-  border-bottom: 1px solid #f0f1f5;
+  border-bottom: 1px solid #303432;
+
 }
 
 .comment-item:last-child {
+
   border-bottom: none;
+
 }
 
 .comment-avatar {
+
   width: 33px;
+
   height: 33px;
 
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 9px;
 
-  background: #eeeaff;
+  background: rgba(139, 120, 255, 0.14);
 
-  color: #674cf3;
+  color: #a394ff;
 
   font-size: 8px;
+
   font-weight: 700;
+
 }
 
 .comment-body {
+
   min-width: 0;
+
   flex: 1;
+
 }
 
 .comment-heading {
+
   display: flex;
+
   justify-content: space-between;
+
   gap: 10px;
+
 }
 
 .comment-heading strong {
-  color: #4b5469;
+
+  color: #cbd0cd;
 
   font-size: 9px;
+
 }
 
 .comment-heading span {
-  color: #a0a6b3;
+
+  color: #858d89;
 
   font-size: 7px;
+
 }
 
 .comment-body p {
+
   margin: 6px 0 0;
 
-  color: #737c8f;
+  color: #9ca49f;
 
   font-size: 9px;
+
   line-height: 1.7;
+
 }
 
 .comment-form {
+
   margin-top: 15px;
+
 }
 
 .comment-form textarea {
+
   width: 100%;
 
   padding: 11px;
 
-  border: 1px solid #dde2eb;
+  border: 1px solid #383c3a;
+
   border-radius: 9px;
+
   outline: none;
 
-  color: #495267;
+  background: #292c2a;
+
+  color: #d7dcd9;
 
   font-family: inherit;
+
   font-size: 9px;
 
   resize: vertical;
+
+}
+
+.comment-form textarea::placeholder {
+
+  color: #737b77;
+
 }
 
 .comment-form textarea:focus {
-  border-color: #735af4;
+
+  border-color: #8b78ff;
 
   box-shadow: 0 0 0 3px
-    rgba(105, 78, 244, 0.08);
+
+    rgba(139, 120, 255, 0.10);
+
 }
 
 .comment-form-footer {
+
   margin-top: 8px;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   gap: 10px;
+
 }
 
 .comment-form-footer > span {
-  color: #99a0b0;
+
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .timeline {
+
   display: flex;
+
   flex-direction: column;
+
 }
 
 .timeline-item {
+
   min-height: 48px;
 
   display: flex;
+
   gap: 10px;
+
 }
 
 .timeline-marker {
+
   width: 16px;
 
   position: relative;
@@ -395,237 +543,331 @@
   flex-shrink: 0;
 
   display: flex;
+
   justify-content: center;
+
 }
 
 .timeline-marker > span {
+
   width: 9px;
+
   height: 9px;
 
   position: relative;
+
   z-index: 1;
 
   margin-top: 3px;
 
-  border: 2px solid #dcd5ff;
+  border: 2px solid #514a75;
+
   border-radius: 50%;
 
-  background: #7157f3;
+  background: #8b78ff;
+
 }
 
 .timeline-line {
+
   width: 1px;
 
   position: absolute;
+
   top: 13px;
+
   bottom: -3px;
 
-  background: #e3e5ed;
+  background: #383c3a;
+
 }
 
 .timeline-content strong {
+
   display: block;
 
-  color: #566075;
+  color: #b8bfbc;
 
   font-size: 9px;
+
 }
 
 .timeline-content span {
+
   display: block;
 
   margin-top: 3px;
 
-  color: #9da4b2;
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .management-field {
+
   margin-bottom: 13px;
+
 }
 
 .management-field:last-child {
+
   margin-bottom: 0;
+
 }
 
 .management-field label {
+
   margin-bottom: 6px;
 
   display: block;
 
-  color: #7f8799;
+  color: #929a96;
 
   font-size: 9px;
+
   font-weight: 700;
+
 }
 
 .management-field select {
+
   width: 100%;
+
   min-height: 39px;
 
   padding: 0 9px;
 
-  border: 1px solid #e0e4ec;
+  border: 1px solid #383c3a;
+
   border-radius: 8px;
+
   outline: none;
 
-  background: white;
+  background: #292c2a;
 
-  color: #596276;
+  color: #c1c7c4;
 
   font-size: 9px;
+
 }
 
 .management-field select:focus {
-  border-color: #7359f3;
+
+  border-color: #8b78ff;
+
 }
 
 .customer-profile {
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   text-align: center;
+
 }
 
 .customer-profile-avatar {
+
   width: 52px;
+
   height: 52px;
 
   margin-bottom: 9px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 14px;
 
   background: linear-gradient(
+
     135deg,
-    #ebe6ff,
-    #f4f1ff
+
+    rgba(139, 120, 255, 0.18),
+
+    rgba(139, 120, 255, 0.08)
+
   );
 
-  color: #684df3;
+  color: #a394ff;
 
   font-size: 13px;
+
   font-weight: 800;
+
 }
 
 .customer-profile strong {
-  color: #424b60;
+
+  color: #cbd0cd;
 
   font-size: 11px;
+
 }
 
 .customer-profile > span {
+
   margin-top: 3px;
 
-  color: #9299aa;
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .customer-details {
+
   margin-top: 16px;
 
-  border-top: 1px solid #eef0f4;
+  border-top: 1px solid #303432;
+
 }
 
 .customer-details > div {
+
   padding: 9px 0;
 
   display: flex;
+
   justify-content: space-between;
+
   gap: 10px;
 
-  border-bottom: 1px solid #f1f2f6;
+  border-bottom: 1px solid #303432;
+
 }
 
 .customer-details span,
+
 .sla-details-row > span {
-  color: #969dac;
+
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .customer-details strong {
-  color: #596276;
+
+  color: #bfc5c2;
 
   font-size: 8px;
 
   text-align: right;
+
 }
 
 .sla-details-row {
+
   padding: 9px 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 8px;
 
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid #303432;
+
 }
 
 .sla-details-row:last-child {
+
   border-bottom: none;
+
 }
 
 .sla-details-row > strong {
-  color: #586176;
+
+  color: #bfc5c2;
 
   font-size: 8px;
 
   text-align: right;
+
 }
 
 @media (max-width: 950px) {
+
   .ticket-details-layout {
+
     grid-template-columns: 1fr;
+
   }
 
   .details-side-column {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
   }
 
   .sla-details-card {
+
     grid-column: 1 / -1;
+
   }
+
 }
 
 @media (max-width: 650px) {
+
   .ticket-details-header {
+
     flex-direction: column;
+
   }
 
   .details-title-area h1 {
+
     font-size: 20px;
+
   }
 
   .details-header-actions {
+
     width: 100%;
+
   }
 
   .details-header-actions > * {
+
     flex: 1;
+
   }
 
   .details-side-column {
+
     display: flex;
+
   }
 
   .details-card {
+
     padding: 16px;
+
   }
 
   .comment-form-footer {
+
     align-items: flex-start;
+
     flex-direction: column;
+
   }
 
   .comment-form-footer .primary-button {
+
     width: 100%;
+
   }
+
 }

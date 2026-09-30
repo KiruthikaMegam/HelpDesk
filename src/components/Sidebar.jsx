@@ -33,10 +33,10 @@ function Sidebar({ open, closeSidebar }) {
   return (
     <aside className={`sidebar ${open ? "sidebar-open" : ""}`}>
       <div className="sidebar-brand">
-        <div className="brand-logo">H</div>
+        <div className="brand-logo">T</div>
 
         <div>
-          <h2>HelpFlow</h2>
+          <h2>TicketEase</h2>
           <span>Support Center</span>
         </div>
 
@@ -71,14 +71,14 @@ function Sidebar({ open, closeSidebar }) {
         ))}
       </nav>
 
-      <div className="sidebar-support-box">
+      {/* <div className="sidebar-support-box">
         <span className="support-box-icon">?</span>
 
         <div>
           <strong>Need help?</strong>
           <p>Check support resources and documentation.</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="sidebar-profile">
         <div className="profile-avatar">KS</div>

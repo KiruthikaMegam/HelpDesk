@@ -1,417 +1,587 @@
 .ticket-form-page {
+
   width: 100%;
+
 }
 
 .ticket-form-layout {
+
   display: grid;
+
   grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.7fr);
+
   gap: 16px;
+
   align-items: flex-start;
+
 }
 
 .ticket-form-card {
+
   padding: 21px;
 
-  border: 1px solid #e7ebf3;
+  border: 1px solid #303432;
+
   border-radius: 16px;
 
-  background: white;
+  background: #202321;
 
-  box-shadow: 0 8px 27px rgba(35, 43, 72, 0.04);
+  box-shadow: 0 8px 27px rgba(0, 0, 0, 0.22);
+
 }
 
 .form-section-heading {
+
   margin-bottom: 22px;
 
   display: flex;
+
   align-items: center;
+
   gap: 11px;
+
 }
 
 .form-section-icon {
+
   width: 35px;
+
   height: 35px;
 
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 10px;
 
-  background: #efecff;
+  background: rgba(139, 120, 255, 0.14);
 
-  color: #684df4;
+  color: #a394ff;
 
   font-size: 10px;
+
   font-weight: 800;
+
 }
 
 .form-section-heading h3 {
+
   margin: 0;
 
-  color: #2f384e;
+  color: #e9edeb;
 
   font-size: 13px;
+
 }
 
 .form-section-heading p {
+
   margin: 3px 0 0;
 
-  color: #99a0b1;
+  color: #929a96;
 
   font-size: 9px;
+
 }
 
 .form-grid {
+
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 15px;
+
 }
 
 .form-group {
+
   min-width: 0;
+
 }
 
 .form-full {
+
   grid-column: 1 / -1;
+
 }
 
 .form-group label {
+
   margin-bottom: 7px;
 
   display: block;
 
-  color: #566074;
+  color: #a6ada9;
 
   font-size: 10px;
+
   font-weight: 700;
+
 }
 
 .form-group label span {
+
   margin-left: 2px;
 
-  color: #e94d5f;
+  color: #f05a6a;
+
 }
 
 .form-group input,
+
 .form-group select,
+
 .form-group textarea {
+
   width: 100%;
 
-  border: 1px solid #dfe4ed;
+  border: 1px solid #383c3a;
+
   border-radius: 9px;
+
   outline: none;
 
-  background: #fff;
+  background: #292c2a;
 
-  color: #394258;
+  color: #d7dcd9;
 
   font-family: inherit;
+
   font-size: 10px;
 
   transition: 0.2s;
+
 }
 
 .form-group input,
+
 .form-group select {
+
   min-height: 41px;
 
   padding: 0 11px;
+
 }
 
 .form-group textarea {
+
   padding: 11px;
 
   resize: vertical;
 
   line-height: 1.6;
+
+}
+
+.form-group input::placeholder,
+
+.form-group textarea::placeholder {
+
+  color: #737b77;
+
 }
 
 .form-group input:focus,
+
 .form-group select:focus,
+
 .form-group textarea:focus {
-  border-color: #7059f2;
+
+  border-color: #8b78ff;
 
   box-shadow: 0 0 0 3px
-    rgba(105, 78, 244, 0.08);
+
+    rgba(139, 120, 255, 0.10);
+
 }
 
 .input-error {
-  border-color: #df5262 !important;
+
+  border-color: #f05a6a !important;
+
 }
 
 .field-error {
+
   margin-top: 5px;
 
   display: block;
 
-  color: #dc4c5e;
+  color: #f16b7b;
 
   font-size: 8px;
+
 }
 
 .textarea-helper {
+
   margin-top: 5px;
 
   display: flex;
+
   justify-content: space-between;
 
-  color: #9ba2b2;
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .textarea-helper span:first-child {
-  color: #db4c5d;
+
+  color: #f16b7b;
+
 }
 
 .ticket-form-side {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 13px;
+
 }
 
 .attachment-drop {
+
   min-height: 160px;
 
   padding: 20px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
-  border: 1px dashed #cfd5e4;
+  border: 1px dashed #454a47;
+
   border-radius: 12px;
 
-  background: #fafbfe;
+  background: #292c2a;
 
   text-align: center;
 
   cursor: pointer;
 
   transition: 0.2s;
+
 }
 
 .attachment-drop:hover {
-  border-color: #7a63f3;
 
-  background: #f9f7ff;
+  border-color: #8b78ff;
+
+  background: rgba(139, 120, 255, 0.08);
+
 }
 
 .attachment-drop input {
+
   display: none;
+
 }
 
 .attachment-drop-icon {
+
   width: 38px;
+
   height: 38px;
 
   margin-bottom: 9px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 10px;
 
-  background: #eeeaff;
+  background: rgba(139, 120, 255, 0.14);
 
-  color: #684df3;
+  color: #a394ff;
 
   font-size: 18px;
+
 }
 
 .attachment-drop strong {
-  color: #515a70;
+
+  color: #cbd0cd;
 
   font-size: 10px;
+
 }
 
 .attachment-drop span {
+
   margin-top: 4px;
 
-  color: #9ba2b0;
+  color: #858d89;
 
   font-size: 8px;
+
 }
 
 .attachment-list {
+
   margin-top: 11px;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 7px;
+
 }
 
 .attachment-item {
+
   min-height: 39px;
 
   padding: 7px 9px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 8px;
 
-  border: 1px solid #e8ebf2;
+  border: 1px solid #383c3a;
+
   border-radius: 8px;
 
-  background: #fafbfc;
+  background: #292c2a;
+
 }
 
 .attachment-item > div {
+
   min-width: 0;
 
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
 }
 
 .attachment-file-icon {
-  color: #6d54f4;
+
+  color: #a394ff;
+
 }
 
 .attachment-item strong {
+
   max-width: 180px;
 
   overflow: hidden;
 
-  color: #677084;
+  color: #aeb5b1;
 
   font-size: 9px;
 
   text-overflow: ellipsis;
+
   white-space: nowrap;
+
 }
 
 .attachment-item button {
+
   border: none;
 
   background: transparent;
 
-  color: #c25361;
+  color: #f16b7b;
 
   font-size: 16px;
 
   cursor: pointer;
+
 }
 
 .form-help-card {
+
   padding: 15px;
 
   display: flex;
+
   align-items: flex-start;
+
   gap: 10px;
 
-  border: 1px solid #e5e2fb;
+  border: 1px solid #403b5e;
+
   border-radius: 13px;
 
-  background: #f9f7ff;
+  background: rgba(139, 120, 255, 0.08);
+
 }
 
 .form-help-icon {
+
   width: 26px;
+
   height: 26px;
 
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
 
-  background: #eae5ff;
+  background: rgba(139, 120, 255, 0.16);
 
-  color: #6248ef;
+  color: #a394ff;
 
   font-size: 10px;
+
   font-weight: 800;
+
 }
 
 .form-help-card strong {
+
   display: block;
 
-  color: #4c5369;
+  color: #cbd0cd;
 
   font-size: 10px;
+
 }
 
 .form-help-card p {
+
   margin: 4px 0 0;
 
-  color: #8d94a5;
+  color: #929a96;
 
   font-size: 8px;
+
   line-height: 1.6;
+
 }
 
 .form-actions {
+
   display: flex;
+
   justify-content: flex-end;
+
   gap: 8px;
+
 }
 
 .form-actions button {
+
   flex: 1;
+
 }
 
 .secondary-button {
+
   min-height: 39px;
 
   padding: 0 15px;
 
-  border: 1px solid #e0e4ec;
+  border: 1px solid #383c3a;
+
   border-radius: 9px;
 
-  background: white;
+  background: #292c2a;
 
-  color: #687185;
+  color: #aeb5b1;
 
   font-size: 10px;
+
   font-weight: 700;
 
   cursor: pointer;
+
+}
+
+.secondary-button:hover {
+
+  background: #323634;
+
+  border-color: #4a504c;
+
+  color: #d4d9d6;
+
 }
 
 .small-empty-box {
+
   padding: 25px;
 
-  border: 1px dashed #e0e4ec;
+  border: 1px dashed #454a47;
+
   border-radius: 10px;
 
-  color: #959dad;
+  background: #202321;
+
+  color: #858d89;
 
   font-size: 9px;
 
   text-align: center;
+
 }
 
 @media (max-width: 950px) {
+
   .ticket-form-layout {
+
     grid-template-columns: 1fr;
+
   }
+
 }
 
 @media (max-width: 600px) {
+
   .ticket-form-card {
+
     padding: 16px;
+
   }
 
   .form-grid {
+
     grid-template-columns: 1fr;
+
   }
 
   .form-full {
+
     grid-column: auto;
+
   }
 
   .form-actions {
+
     flex-direction: column-reverse;
+
   }
 
   .form-actions button {
+
     width: 100%;
+
     min-height: 42px;
+
   }
+
 }

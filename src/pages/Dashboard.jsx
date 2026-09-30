@@ -77,6 +77,11 @@ function Dashboard() {
 
   return (
     <div className="dashboard-page page-animation">
+
+      {/* =========================
+          PAGE HEADER
+      ========================= */}
+
       <div className="page-heading">
         <div>
           <span className="page-eyebrow">
@@ -99,7 +104,13 @@ function Dashboard() {
         </Link>
       </div>
 
+
+      {/* =========================
+          STAT CARDS
+      ========================= */}
+
       <div className="dashboard-stats">
+
         <StatCard
           title="Open Tickets"
           value={openTickets}
@@ -131,33 +142,52 @@ function Dashboard() {
           subtitle="Requires immediate action"
           variant="orange"
         />
+
       </div>
 
+
+      {/* =========================
+          MAIN GRID
+      ========================= */}
+
       <div className="dashboard-grid">
+
+        {/* TICKET OVERVIEW */}
+
         <section className="dashboard-panel ticket-volume-panel">
+
           <div className="panel-heading">
+
             <div>
               <h3>Ticket Overview</h3>
 
-              <p>Tickets grouped by current status</p>
+              <p>
+                Tickets grouped by current status
+              </p>
             </div>
 
             <span className="panel-chip">
               This Week
             </span>
+
           </div>
 
+
           <div className="dashboard-chart">
+
             {statusData.map((item) => (
+
               <div
                 className="dashboard-chart-column"
                 key={item.label}
               >
+
                 <div className="chart-number">
                   {item.value}
                 </div>
 
                 <div className="chart-track">
+
                   <div
                     className={`chart-fill ${item.className}`}
                     style={{
@@ -166,57 +196,97 @@ function Dashboard() {
                       }%`,
                     }}
                   />
+
                 </div>
 
-                <span>{item.label}</span>
+                <span>
+                  {item.label}
+                </span>
+
               </div>
+
             ))}
+
           </div>
+
         </section>
 
+
+        {/* SLA HEALTH */}
+
         <section className="dashboard-panel sla-health-panel">
+
           <div className="panel-heading">
+
             <div>
               <h3>SLA Health</h3>
 
-              <p>Current SLA performance</p>
+              <p>
+                Current SLA performance
+              </p>
             </div>
+
           </div>
+
 
           <div className="sla-score">
-            <div className="sla-ring">
-              <div className="sla-ring-inner">
-                <strong>92%</strong>
 
-                <span>SLA Met</span>
+            <div className="sla-ring">
+
+              <div className="sla-ring-inner">
+
+                <strong>
+                  92%
+                </strong>
+
+                <span>
+                  SLA Met
+                </span>
+
               </div>
+
             </div>
+
           </div>
 
+
           <div className="sla-summary">
+
             <div>
+
               <span className="sla-dot sla-dot-safe" />
+
               Within SLA
+
               <strong>
                 {
                   tickets.filter(
                     (ticket) =>
-                      new Date(ticket.slaDue) >
-                        new Date() ||
-                      ticket.status === "Resolved" ||
-                      ticket.status === "Closed"
+                      ticket.slaDue &&
+                      (
+                        new Date(ticket.slaDue) >
+                          new Date() ||
+                        ticket.status === "Resolved" ||
+                        ticket.status === "Closed"
+                      )
                   ).length
                 }
               </strong>
+
             </div>
 
+
             <div>
+
               <span className="sla-dot sla-dot-danger" />
+
               Breached
+
               <strong>
                 {
                   tickets.filter(
                     (ticket) =>
+                      ticket.slaDue &&
                       new Date(ticket.slaDue) <
                         new Date() &&
                       ticket.status !== "Resolved" &&
@@ -224,18 +294,39 @@ function Dashboard() {
                   ).length
                 }
               </strong>
+
             </div>
+
           </div>
+
         </section>
+
       </div>
 
-      <div className="dashboard-lower-grid">
-        <section className="dashboard-panel">
-          <div className="panel-heading">
-            <div>
-              <h3>Recent Tickets</h3>
 
-              <p>Latest customer requests</p>
+      {/* =========================
+          LOWER GRID
+      ========================= */}
+
+      <div className="dashboard-lower-grid">
+
+
+        {/* =========================
+            RECENT TICKETS
+        ========================= */}
+
+        <section className="dashboard-panel">
+
+          <div className="panel-heading">
+
+            <div>
+              <h3>
+                Recent Tickets
+              </h3>
+
+              <p>
+                Latest customer requests
+              </p>
             </div>
 
             <Link
@@ -244,97 +335,216 @@ function Dashboard() {
             >
               View all
             </Link>
+
           </div>
+
 
           <div className="dashboard-ticket-list">
-            {tickets.slice(0, 5).map((ticket) => (
-              <Link
-                to={`/tickets/${ticket.id}`}
-                className="dashboard-ticket-row"
-                key={ticket.id}
-              >
-                <div className="dashboard-ticket-customer">
-                  <div className="customer-avatar">
-                    {ticket.customer
-                      .split(" ")
-                      .map((word) => word[0])
-                      .join("")
-                      .slice(0, 2)}
-                  </div>
 
-                  <div>
-                    <strong>{ticket.subject}</strong>
+            {tickets
+              .slice(0, 5)
+              .map((ticket) => {
 
-                    <span>
-                      #{ticket.id} • {ticket.customer}
-                    </span>
-                  </div>
-                </div>
+                /*
+                  SAFE CUSTOMER VALUE
 
-                <PriorityBadge
-                  priority={ticket.priority}
-                />
+                  If customer is missing,
+                  use "Unknown Customer"
+                */
 
-                <StatusBadge
-                  status={ticket.status}
-                />
-              </Link>
-            ))}
+                const customer =
+                  ticket.customer ||
+                  "Unknown Customer";
+
+
+                /*
+                  CREATE CUSTOMER INITIALS
+                */
+
+                const customerInitials =
+                  customer
+                    .split(" ")
+                    .filter(Boolean)
+                    .map((word) => word[0])
+                    .join("")
+                    .slice(0, 2);
+
+
+                return (
+
+                  <Link
+                    to={`/tickets/${ticket.id}`}
+                    className="dashboard-ticket-row"
+                    key={ticket.id}
+                  >
+
+                    <div className="dashboard-ticket-customer">
+
+                      <div className="customer-avatar">
+                        {customerInitials || "UC"}
+                      </div>
+
+
+                      <div>
+
+                        <strong>
+                          {ticket.subject ||
+                            "Untitled Ticket"}
+                        </strong>
+
+                        <span>
+                          #{ticket.id || "N/A"} • {customer}
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <PriorityBadge
+                      priority={
+                        ticket.priority ||
+                        "Low"
+                      }
+                    />
+
+
+                    <StatusBadge
+                      status={
+                        ticket.status ||
+                        "Open"
+                      }
+                    />
+
+                  </Link>
+
+                );
+              })}
+
           </div>
+
         </section>
 
-        <section className="dashboard-panel">
-          <div className="panel-heading">
-            <div>
-              <h3>Support Team</h3>
 
-              <p>Agent workload</p>
+        {/* =========================
+            SUPPORT TEAM
+        ========================= */}
+
+        <section className="dashboard-panel">
+
+          <div className="panel-heading">
+
+            <div>
+
+              <h3>
+                Support Team
+              </h3>
+
+              <p>
+                Agent workload
+              </p>
+
             </div>
+
           </div>
 
+
           <div className="agent-list">
+
             {agents
               .filter(
-                (agent) => agent !== "Unassigned"
+                (agent) =>
+                  agent &&
+                  agent !== "Unassigned"
               )
               .slice(0, 5)
               .map((agent) => {
-                const count = tickets.filter(
-                  (ticket) =>
-                    ticket.assignee === agent &&
-                    ticket.status !== "Closed"
-                ).length;
+
+                /*
+                  SAFE AGENT VALUE
+                */
+
+                const agentName =
+                  agent || "Unknown Agent";
+
+
+                const count =
+                  tickets.filter(
+                    (ticket) =>
+                      ticket.assignee ===
+                        agentName &&
+                      ticket.status !==
+                        "Closed"
+                  ).length;
+
+
+                /*
+                  CREATE AGENT INITIALS
+                */
+
+                const agentInitials =
+                  agentName
+                    .split(" ")
+                    .filter(Boolean)
+                    .map(
+                      (item) => item[0]
+                    )
+                    .join("")
+                    .slice(0, 2);
+
 
                 return (
+
                   <div
                     className="agent-row"
-                    key={agent}
+                    key={agentName}
                   >
+
                     <div className="agent-avatar">
-                      {agent
-                        .split(" ")
-                        .map((item) => item[0])
-                        .join("")
-                        .slice(0, 2)}
+
+                      {agentInitials ||
+                        "UA"}
+
                     </div>
+
 
                     <div className="agent-name">
-                      <strong>{agent}</strong>
 
-                      <span>Support Agent</span>
+                      <strong>
+                        {agentName}
+                      </strong>
+
+                      <span>
+                        Support Agent
+                      </span>
+
                     </div>
+
 
                     <div className="agent-ticket-count">
-                      <strong>{count}</strong>
 
-                      <span>tickets</span>
+                      <strong>
+                        {count}
+                      </strong>
+
+                      <span>
+                        tickets
+                      </span>
+
                     </div>
+
                   </div>
+
                 );
+
               })}
+
           </div>
+
         </section>
+
       </div>
+
     </div>
   );
 }

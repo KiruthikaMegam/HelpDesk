@@ -32,7 +32,7 @@
 
   margin-bottom: 6px;
 
-  color: #745cf4;
+  color: #a394ff;
 
   font-size: 9px;
   font-weight: 800;
@@ -42,7 +42,7 @@
 .page-heading h1 {
   margin: 0;
 
-  color: #202940;
+  color: #eef1ef;
 
   font-size: 24px;
   letter-spacing: -0.5px;
@@ -51,7 +51,7 @@
 .page-heading p {
   margin: 7px 0 0;
 
-  color: #8992a6;
+  color: #929a96;
 
   font-size: 11px;
 }
@@ -68,9 +68,9 @@
   border: none;
   border-radius: 9px;
 
-  background: #684ef4;
+  background: #8b78ff;
 
-  color: white;
+  color: #ffffff;
 
   text-decoration: none;
 
@@ -79,13 +79,13 @@
 
   cursor: pointer;
 
-  box-shadow: 0 8px 22px rgba(104, 78, 244, 0.2);
+  box-shadow: 0 8px 22px rgba(139, 120, 255, 0.2);
 
   transition: 0.2s;
 }
 
 .primary-button:hover {
-  background: #5b42e8;
+  background: #9b8cff;
 
   transform: translateY(-1px);
 }
@@ -117,12 +117,12 @@
 
   padding: 20px;
 
-  border: 1px solid #e8ecf4;
+  border: 1px solid #303432;
   border-radius: 16px;
 
-  background: white;
+  background: #202321;
 
-  box-shadow: 0 8px 28px rgba(37, 44, 72, 0.04);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
 }
 
 .panel-heading {
@@ -137,7 +137,7 @@
 .panel-heading h3 {
   margin: 0;
 
-  color: #293248;
+  color: #e9edeb;
 
   font-size: 13px;
 }
@@ -145,7 +145,7 @@
 .panel-heading p {
   margin: 4px 0 0;
 
-  color: #959cac;
+  color: #929a96;
 
   font-size: 9px;
 }
@@ -153,21 +153,27 @@
 .panel-chip {
   padding: 6px 9px;
 
-  border: 1px solid #e5e7ee;
+  border: 1px solid #383c3a;
   border-radius: 7px;
 
-  color: #70798d;
+  background: #292c2a;
+
+  color: #a4aca8;
 
   font-size: 9px;
 }
 
 .panel-link {
-  color: #684ef4;
+  color: #a394ff;
 
   text-decoration: none;
 
   font-size: 10px;
   font-weight: 700;
+}
+
+.panel-link:hover {
+  color: #b5aaff;
 }
 
 .dashboard-chart {
@@ -180,7 +186,7 @@
   justify-content: space-around;
   gap: 18px;
 
-  border-bottom: 1px solid #eef0f5;
+  border-bottom: 1px solid #303432;
 }
 
 .dashboard-chart-column {
@@ -197,7 +203,7 @@
 .chart-number {
   margin-bottom: 6px;
 
-  color: #606a7e;
+  color: #b0b8b4;
 
   font-size: 10px;
   font-weight: 700;
@@ -212,7 +218,7 @@
 
   border-radius: 8px 8px 0 0;
 
-  background: #f4f5f9;
+  background: #2b2e2c;
 
   overflow: hidden;
 }
@@ -229,24 +235,24 @@
 .chart-purple {
   background: linear-gradient(
     180deg,
-    #8b72ff,
-    #684ef4
+    #a394ff,
+    #7968e8
   );
 }
 
 .chart-blue {
   background: linear-gradient(
     180deg,
-    #6bbcf9,
-    #3798e4
+    #72baf0,
+    #4b91cf
   );
 }
 
 .chart-orange {
   background: linear-gradient(
     180deg,
-    #ffbd74,
-    #f39645
+    #f4b66f,
+    #d8873f
   );
 }
 
@@ -254,14 +260,14 @@
   background: linear-gradient(
     180deg,
     #64dba5,
-    #28b976
+    #32b97d
   );
 }
 
 .dashboard-chart-column > span {
   margin-top: 9px;
 
-  color: #7f8798;
+  color: #929a96;
 
   font-size: 9px;
 
@@ -292,8 +298,8 @@
   border-radius: 50%;
 
   background: conic-gradient(
-    #6b50f4 0deg 331deg,
-    #ece9ff 331deg 360deg
+    #8b78ff 0deg 331deg,
+    #343136 331deg 360deg
   );
 }
 
@@ -307,7 +313,7 @@
 
   border-radius: 50%;
 
-  background: white;
+  background: #202321;
 }
 
 .sla-ring-inner {
@@ -320,13 +326,13 @@
 .sla-ring-inner strong {
   display: block;
 
-  color: #293149;
+  color: #eef1ef;
 
   font-size: 23px;
 }
 
 .sla-ring-inner span {
-  color: #979eae;
+  color: #929a96;
 
   font-size: 9px;
 }
@@ -344,13 +350,13 @@
   align-items: center;
   gap: 5px;
 
-  color: #7a8395;
+  color: #969e9a;
 
   font-size: 9px;
 }
 
 .sla-summary strong {
-  color: #323b52;
+  color: #d2d7d4;
 }
 
 .sla-dot {
@@ -361,11 +367,11 @@
 }
 
 .sla-dot-safe {
-  background: #36bd7a;
+  background: #35c98a;
 }
 
 .sla-dot-danger {
-  background: #eb5566;
+  background: #f05a6a;
 }
 
 .dashboard-ticket-list {
@@ -381,7 +387,7 @@
   align-items: center;
   gap: 12px;
 
-  border-bottom: 1px solid #eff1f6;
+  border-bottom: 1px solid #303432;
 
   text-decoration: none;
 
@@ -395,7 +401,7 @@
 .dashboard-ticket-row:hover {
   padding-left: 7px;
 
-  background: #fafaff;
+  background: rgba(139, 120, 255, 0.04);
 }
 
 .dashboard-ticket-customer {
@@ -418,9 +424,9 @@
 
   border-radius: 9px;
 
-  background: #f0edff;
+  background: rgba(139, 120, 255, 0.14);
 
-  color: #664df2;
+  color: #a394ff;
 
   font-size: 9px;
   font-weight: 700;
@@ -433,7 +439,7 @@
 
   overflow: hidden;
 
-  color: #343c52;
+  color: #d2d7d4;
 
   font-size: 10px;
 
@@ -446,7 +452,7 @@
 
   margin-top: 3px;
 
-  color: #9ba1b0;
+  color: #858d89;
 
   font-size: 8px;
 }
@@ -463,7 +469,7 @@
   align-items: center;
   gap: 9px;
 
-  border-bottom: 1px solid #f0f1f5;
+  border-bottom: 1px solid #303432;
 }
 
 .agent-row:last-child {
@@ -478,14 +484,14 @@
 .agent-name strong {
   display: block;
 
-  color: #3b4358;
+  color: #c9cfcc;
 
   font-size: 10px;
 }
 
 .agent-name span,
 .agent-ticket-count span {
-  color: #969dae;
+  color: #858d89;
 
   font-size: 8px;
 }
@@ -497,7 +503,7 @@
 .agent-ticket-count strong {
   display: block;
 
-  color: #654cf2;
+  color: #a394ff;
 
   font-size: 12px;
 }

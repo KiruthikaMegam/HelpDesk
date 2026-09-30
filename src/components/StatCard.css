@@ -1,61 +1,55 @@
 .stat-card {
   min-width: 0;
-
   padding: 20px;
-
   display: flex;
   align-items: flex-start;
   gap: 13px;
-
-  border: 1px solid #e9edf5;
+  border: 1px solid #303432;
   border-radius: 16px;
-
-  background: #fff;
-
-  box-shadow: 0 8px 28px rgba(36, 43, 73, 0.045);
-
+  background: #202321;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
   transition: 0.25s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-3px);
-
-  box-shadow: 0 12px 35px rgba(36, 43, 73, 0.08);
+  border-color: #3b403d;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.32);
 }
 
 .stat-icon {
   width: 46px;
   height: 46px;
-
   flex-shrink: 0;
-
   display: grid;
   place-items: center;
-
   border-radius: 13px;
-
   font-size: 18px;
   font-weight: 700;
 }
 
+/* Purple */
 .stat-purple {
-  background: #efecff;
-  color: #684df4;
+  background: rgba(139, 120, 255, 0.15);
+  color: #a394ff;
 }
 
+/* Orange */
 .stat-orange {
-  background: #fff2e5;
-  color: #e88425;
+  background: rgba(232, 132, 37, 0.14);
+  color: #f2a04b;
 }
 
+/* Blue */
 .stat-blue {
-  background: #e9f5ff;
-  color: #3286d6;
+  background: rgba(50, 134, 214, 0.14);
+  color: #61a9ed;
 }
 
+/* Green */
 .stat-green {
-  background: #e7f9f0;
-  color: #23a466;
+  background: rgba(35, 164, 102, 0.14);
+  color: #45c98a;
 }
 
 .stat-content {
@@ -64,28 +58,21 @@
 
 .stat-title {
   display: block;
-
   margin-bottom: 5px;
-
-  color: #7e879d;
-
+  color: #a2aaa6;
   font-size: 11px;
   font-weight: 600;
 }
 
 .stat-content strong {
   display: block;
-
-  color: #20283f;
-
+  color: #f0f2f1;
   font-size: 25px;
   line-height: 1.15;
 }
 
 .stat-content p {
   margin: 5px 0 0;
-
-  color: #9aa2b4;
-
+  color: #858d89;
   font-size: 10px;
 }

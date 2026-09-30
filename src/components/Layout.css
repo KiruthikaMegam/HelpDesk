@@ -2,19 +2,21 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  background: #f5f7fb;
+  background: #181a19;
 }
 
 .helpdesk-main {
   width: calc(100% - 250px);
   margin-left: 250px;
   min-height: 100vh;
+  background: #181a19;
   transition: 0.3s;
 }
 
 .helpdesk-content {
   width: 100%;
   padding: 28px;
+  color: #e8ebe9;
 }
 
 .sidebar-mobile-overlay {
@@ -25,6 +27,7 @@
   .helpdesk-main {
     width: 100%;
     margin-left: 0;
+    background: #181a19;
   }
 
   .sidebar-mobile-overlay {
@@ -32,12 +35,13 @@
     position: fixed;
     inset: 0;
     z-index: 90;
-    background: rgba(10, 18, 38, 0.55);
+    background: rgba(5, 7, 6, 0.72);
     backdrop-filter: blur(2px);
   }
 
   .helpdesk-content {
     padding: 22px;
+    color: #e8ebe9;
   }
 }
 

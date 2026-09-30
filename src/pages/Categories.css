@@ -4,8 +4,11 @@
 
 .categories-layout {
   display: grid;
+
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.7fr);
+
   gap: 16px;
+
   align-items: flex-start;
 }
 
@@ -13,12 +16,12 @@
 .category-list-card {
   padding: 21px;
 
-  border: 1px solid #e7ebf2;
+  border: 1px solid #303432;
   border-radius: 16px;
 
-  background: white;
+  background: #202321;
 
-  box-shadow: 0 7px 27px rgba(35, 42, 70, 0.04);
+  box-shadow: 0 7px 27px rgba(0, 0, 0, 0.22);
 }
 
 .category-card-icon {
@@ -32,9 +35,8 @@
 
   border-radius: 11px;
 
-  background: #ede9ff;
-
-  color: #674df3;
+  background: rgba(139, 120, 255, 0.14);
+  color: #a394ff;
 
   font-size: 21px;
 }
@@ -43,7 +45,7 @@
 .category-list-heading h3 {
   margin: 0;
 
-  color: #343c52;
+  color: #e9edeb;
 
   font-size: 13px;
 }
@@ -52,9 +54,10 @@
 .category-list-heading p {
   margin: 5px 0 20px;
 
-  color: #979eae;
+  color: #929a96;
 
   font-size: 9px;
+
   line-height: 1.6;
 }
 
@@ -63,30 +66,41 @@
 
   display: block;
 
-  color: #687185;
+  color: #a6ada9;
 
   font-size: 9px;
+
   font-weight: 700;
 }
 
 .category-create-card form input {
   width: 100%;
+
   min-height: 40px;
 
   margin-bottom: 9px;
+
   padding: 0 10px;
 
-  border: 1px solid #e0e4ec;
+  border: 1px solid #383c3a;
   border-radius: 8px;
+
   outline: none;
 
-  color: #4c5569;
+  background: #292c2a;
+
+  color: #e0e4e2;
 
   font-size: 10px;
 }
 
+.category-create-card form input::placeholder {
+  color: #737b77;
+}
+
 .category-create-card form input:focus {
-  border-color: #7158f2;
+  border-color: #8b78ff;
+  background: #2b2e2c;
 }
 
 .category-create-card .primary-button {
@@ -109,9 +123,10 @@
 
   display: flex;
   align-items: center;
+
   gap: 10px;
 
-  border-bottom: 1px solid #eff1f5;
+  border-bottom: 1px solid #303432;
 }
 
 .category-row:last-child {
@@ -130,43 +145,45 @@
   border-radius: 10px;
 
   font-size: 11px;
+
   font-weight: 800;
 }
 
 .category-color-1 {
-  background: #eeeaff;
-  color: #684ef3;
+  background: rgba(139, 120, 255, 0.14);
+  color: #a394ff;
 }
 
 .category-color-2 {
-  background: #e7f5ff;
-  color: #3d8bc7;
+  background: rgba(61, 139, 199, 0.14);
+  color: #65aee3;
 }
 
 .category-color-3 {
-  background: #e8f8ef;
-  color: #299567;
+  background: rgba(41, 149, 103, 0.14);
+  color: #4bc58c;
 }
 
 .category-color-4 {
-  background: #fff2e4;
-  color: #cf7a2f;
+  background: rgba(207, 122, 47, 0.14);
+  color: #e5a15d;
 }
 
 .category-color-5 {
-  background: #ffecef;
-  color: #d85262;
+  background: rgba(216, 82, 98, 0.14);
+  color: #f16c7b;
 }
 
 .category-name {
   min-width: 0;
+
   flex: 1;
 }
 
 .category-name strong {
   display: block;
 
-  color: #4b5469;
+  color: #cbd0cd;
 
   font-size: 10px;
 }
@@ -176,13 +193,14 @@
 
   margin-top: 3px;
 
-  color: #9ba2b1;
+  color: #858d89;
 
   font-size: 8px;
 }
 
 .category-count {
   min-width: 26px;
+
   height: 26px;
 
   padding: 0 6px;
@@ -192,11 +210,12 @@
 
   border-radius: 7px;
 
-  background: #f4f5f8;
+  background: #2b2e2c;
 
-  color: #737c90;
+  color: #aab1ad;
 
   font-size: 9px;
+
   font-weight: 700;
 }
 
@@ -204,16 +223,22 @@
   width: 28px;
   height: 28px;
 
-  border: none;
+  border: 1px solid rgba(215, 78, 94, 0.18);
+
   border-radius: 7px;
 
-  background: #fff1f2;
+  background: rgba(215, 78, 94, 0.10);
 
-  color: #d74e5e;
+  color: #f16b7b;
 
   font-size: 15px;
 
   cursor: pointer;
+}
+
+.category-delete:hover {
+  background: rgba(215, 78, 94, 0.18);
+  color: #ff7b89;
 }
 
 @media (max-width: 850px) {
